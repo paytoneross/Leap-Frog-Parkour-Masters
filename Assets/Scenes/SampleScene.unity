@@ -455,7 +455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &399270805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -639,7 +639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &590052290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1950,13 +1950,25 @@ PrefabInstance:
       value: Player 2
       objectReference: {fileID: 0}
     - target: {fileID: 6719244352160557553, guid: bd5f9fea7dc2dd042b4a514c6addfcef, type: 3}
+      propertyPath: itText
+      value: 
+      objectReference: {fileID: 1401247238}
+    - target: {fileID: 6719244352160557553, guid: bd5f9fea7dc2dd042b4a514c6addfcef, type: 3}
+      propertyPath: player1IsIt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719244352160557553, guid: bd5f9fea7dc2dd042b4a514c6addfcef, type: 3}
       propertyPath: player2IsIt
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6719244352160557553, guid: bd5f9fea7dc2dd042b4a514c6addfcef, type: 3}
       propertyPath: player1ScoreText
       value: 
-      objectReference: {fileID: 1401247238}
+      objectReference: {fileID: 399270807}
+    - target: {fileID: 6719244352160557553, guid: bd5f9fea7dc2dd042b4a514c6addfcef, type: 3}
+      propertyPath: player2ScoreText
+      value: 
+      objectReference: {fileID: 590052290}
     - target: {fileID: 6719244352160557553, guid: bd5f9fea7dc2dd042b4a514c6addfcef, type: 3}
       propertyPath: player2ScoreScript
       value: 
@@ -2019,9 +2031,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 857357233266904104, guid: 6ea6482418288ad4da4d6ad0f9f878a2, type: 3}
-      propertyPath: player2ScoreText
+      propertyPath: itText
       value: 
       objectReference: {fileID: 1401247238}
+    - target: {fileID: 857357233266904104, guid: 6ea6482418288ad4da4d6ad0f9f878a2, type: 3}
+      propertyPath: player1ScoreText
+      value: 
+      objectReference: {fileID: 399270807}
+    - target: {fileID: 857357233266904104, guid: 6ea6482418288ad4da4d6ad0f9f878a2, type: 3}
+      propertyPath: player2ScoreText
+      value: 
+      objectReference: {fileID: 590052290}
     - target: {fileID: 857357233266904104, guid: 6ea6482418288ad4da4d6ad0f9f878a2, type: 3}
       propertyPath: player1ScoreScript
       value: 

@@ -67,7 +67,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player2ScoreText: {fileID: 0}
-  player2Score: 0
+  player1ScoreScript: {fileID: 0}
+  player1IsIt: 1
 --- !u!1 &4046671040316966993
 GameObject:
   m_ObjectHideFlags: 0
