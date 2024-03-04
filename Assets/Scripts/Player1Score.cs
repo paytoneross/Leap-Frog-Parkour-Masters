@@ -24,7 +24,7 @@ public class Player1Score : MonoBehaviour
             StartCoroutine(AbleToScore());
 
             player1ScoreText.text = "Player 1 Score: " + player1Score;
-            itText.text = "Player 1 is it!";
+            itText.text = "Player 2 is it!";
             //Debug.Log("Tag!");
         }
     }
