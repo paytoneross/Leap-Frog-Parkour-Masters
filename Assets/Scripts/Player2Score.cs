@@ -5,27 +5,29 @@ using UnityEngine.UI;
 
 public class Player2Score : MonoBehaviour
 {
-    [SerializeField] private Text itText;
-    [SerializeField] private Text player2ScoreText;
+    [SerializeField] private Text player1ItText;
+    [SerializeField] private Text player2ItText;
+    [SerializeField] private Text player1ScoreText;
     [SerializeField] private Player1Score player1ScoreScript;
 
-    private int player2Score = 0;
-    public bool player2IsIt = false;
+    public int player1Score = 0;
+    public bool player1IsIt = true;
     private int tagBackDelay = 2;
     private bool ableToTagBack = true;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (player2IsIt && ableToTagBack && other.gameObject.CompareTag("Player 2"))
+        if (player1IsIt && ableToTagBack && other.gameObject.CompareTag("Player 1 Bullet"))
         {
-            player2IsIt = false;
-            player1ScoreScript.player1IsIt = true;
-            player2Score += 1;
+            player1IsIt = false;
+            player1ScoreScript.player2IsIt = true;
+            player1Score += 1;
             StartCoroutine(AbleToScore());
 
-            player2ScoreText.text = "Player 2 Score: " + player2Score;
-            itText.text = "Player 1 is it!";
-            //Debug.Log("Tag!");
+            player1ScoreText.text = "Player 1 Score: " + player1Score;
+            player2ItText.enabled = true;
+            player1ItText.enabled = false;
+            Debug.Log("Tag!");
         }
     }
 
@@ -35,7 +37,7 @@ public class Player2Score : MonoBehaviour
         {
             yield return new WaitForSeconds(tagBackDelay);
             ableToTagBack = true;
-            Debug.Log("Player 1 Can Tag Back!");
+            Debug.Log("Player 2 Can Tag Back!");
         }
     }
 }

@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
- 
+
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
@@ -15,28 +13,28 @@ public class PlayerController : MonoBehaviour
     CharacterController characterController;
     Vector3 moveVelocity;
     Vector3 turnVelocity;
- 
+
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
     }
- 
+
     void Update()
     {
         var hInput = Input.GetAxis("Horizontal");
         var vInput = Input.GetAxis("Vertical");
- 
-        if(characterController.isGrounded)
+
+        if (characterController.isGrounded)
         {
             //This prevents the player from moving backwards
-            if(vInput < 0)
-            {
-                vInput *= -1;
-            }
+            //if(vInput < 0)
+            //{
+            //    vInput *= -1;
+            //}
 
             moveVelocity = transform.forward * speed * vInput;
             turnVelocity = transform.up * rotationSpeed * hInput;
-            if(Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump"))
             {
                 moveVelocity.y = jumpSpeed;
             }
@@ -54,8 +52,7 @@ public class PlayerController : MonoBehaviour
         Rigidbody body = hit.collider.attachedRigidbody;
         if (body != null && !body.isKinematic)
         {
-            // change 10 to push force once we get it to scale to movement. 
             body.velocity = hit.moveDirection * pushForce;
-        }                        
+        }
     }
 }
